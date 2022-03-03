@@ -1,36 +1,35 @@
 const mongoose = require("mongoose");
 
-const itemSchema = new mongoose.Schema({
+const purchaseSchema = new mongoose.Schema({
   title: {
     type: String,
     maxlength: 100,
     required: true,
   },
-  imageUrl: {
-    type: String,
-  },
-  description: {
+  comment: {
     type: String,
     maxlength: 500,
   },
   price: {
-    required: true,
-    type: String,
-    maxlength: 20,
-  },
-  category: {
     type: String,
     maxlength: 100,
     required: true,
   },
-  subcategory: {
+  quantity: {
+    type: Number,
+    required: true,
+  },
+  imageUrl: {
     type: String,
-    maxlength: 100,
+  },
+  numberOfTable: {
+    type: Number,
     required: true,
   },
   isKitchen: {
     type: Boolean,
+    required: true,
   },
 });
 
-module.exports = mongoose.model("Item", itemSchema);
+module.exports = mongoose.model("Purchase", purchaseSchema);
