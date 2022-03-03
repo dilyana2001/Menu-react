@@ -4,7 +4,7 @@ import auth from "../../service/userService";
 import { useContext } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
-const Header = ({ history }) => {
+const Header = () => {
   const {
     isAuthenticated,
     login,
@@ -24,7 +24,7 @@ const Header = ({ history }) => {
           className="text-white"
           to="/"
           onClick={() => {
-            auth.logout(history, login);
+            auth.logout(login);
           }}
         >
           Logout
