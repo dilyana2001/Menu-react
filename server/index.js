@@ -8,7 +8,7 @@ const { auth } = require("./middlewares/auth");
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://productionUserEli:awPg9qmHM7DWPHvf@cluster0.af70a.mongodb.net/menu?retryWrites=true&w=majority"
+  "mongodb+srv://<admin>:<password>@cluster0.af70a.mongodb.net/menu?retryWrites=true&w=majority"
 );
 mongoose.connection.on("error", console.log.bind(console, `connection error`));
 mongoose.connection.once(
